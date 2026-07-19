@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "82EDAB45EC792440811528BA"
+               BlueprintIdentifier = "76C73C8B4CC29646C77879F0"
                BuildableName = "Engine.framework"
                BlueprintName = "Engine"
                ReferencedContainer = "container:Tersten.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9F5DA0CC83EC27838F6A10DB"
+               BlueprintIdentifier = "4F4318EFC3A7669272DD6D4D"
                BuildableName = "EngineTests.xctest"
                BlueprintName = "EngineTests"
                ReferencedContainer = "container:Tersten.xcodeproj">

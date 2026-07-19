@@ -21,7 +21,7 @@ end
 engine = project.new_target(:framework, "Engine", :ios, DEPLOYMENT, nil, :swift)
 
 engine_group = project.main_group.new_group("Engine", "Engine")
-%w[TurkishAlphabet.swift Word.swift].each do |file|
+%w[TurkishAlphabet.swift Word.swift TileMark.swift Pattern.swift].each do |file|
   ref = engine_group.new_reference(file)
   engine.add_file_references([ref])
 end
@@ -47,7 +47,7 @@ end
 tests = project.new_target(:unit_test_bundle, "EngineTests", :ios, DEPLOYMENT, nil, :swift)
 
 tests_group = project.main_group.new_group("EngineTests", "EngineTests")
-%w[CasingTests.swift WordTests.swift].each do |file|
+%w[CasingTests.swift WordTests.swift PatternTests.swift].each do |file|
   ref = tests_group.new_reference(file)
   tests.add_file_references([ref])
 end
