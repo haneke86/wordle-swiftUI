@@ -37,4 +37,16 @@ struct CasingTests {
             #expect(TurkishAlphabet.uppercased(lower) == upper)
         }
     }
+
+    /// The table's uppercase outputs must be *exactly* the canonical alphabet.
+    /// `canonicalLetters` and the value side of `uppercaseTable` are two
+    /// independently hand-written literals (ADR-0002); the locale-agreement test
+    /// only cross-checks table rows and never references `canonicalLetters`, so
+    /// this is the sole guard against the two drifting apart — a dropped or
+    /// mistyped canonical letter (e.g. losing `Z`) would slip past every other
+    /// test but not this one.
+    @Test("Casing table's uppercase values are exactly the canonical alphabet")
+    func tableValuesAreExactlyTheCanonicalAlphabet() {
+        #expect(Set(TurkishAlphabet.uppercaseTable.values) == TurkishAlphabet.canonicalSet)
+    }
 }
