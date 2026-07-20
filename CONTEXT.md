@@ -66,6 +66,14 @@ _Avoid_: dictionary, word list (ambiguous between the pools)
 The curated subset of the Accept Set (blocklist-filtered; later frequency-filtered) from which answers and Witnesses are drawn. The only pool whose words the game ever *shows* the player.
 _Avoid_: answer list, common words
 
+**Blocklist**:
+The hand-maintained file of words excluded from the Answer Pool — never shown as answers or Witnesses. Blocked words stay in the Accept Set: they still validate as player submissions, they just can't be *shown*. Scope is offensive words (profanity/slurs); rarity and awkwardness are not the Blocklist's job.
+_Avoid_: banlist, filter, censor list
+
+**List Version**:
+A monotonic label (`tr-v1`, `tr-v2`, …) exposed on the Engine's interface, identifying the exact bundled list contents. The only thing whose change may alter ingestion output, and the anchor the Daily Puzzle uses to keep "which answer showed on day N" reproducible. Bumped whenever any bundled list file changes.
+_Avoid_: list date, revision, build number
+
 **PuzzleSource**:
 Anything that supplies Puzzles: the v1 generator, a daily feed, custom/authored puzzles later. The game loop consumes Puzzles without knowing their origin.
 _Avoid_: level provider, puzzle factory
