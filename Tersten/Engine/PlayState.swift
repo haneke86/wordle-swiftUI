@@ -104,6 +104,16 @@ public struct PlayState {
         return Dictionary(uniqueKeysWithValues: hintedPositions.map { ($0, witness.letters[$0]) })
     }
 
+    /// Keyboard guidance for the active Row — green pre-fill and cursor dimming
+    /// (#8, ADR-0003), derived only from the Row's target Pattern and the answer.
+    /// `nil` once the Puzzle is complete. Read-only, like `revealedHints`: it never
+    /// mutates progress and never consults the Accept Set, so keyboard hints can't
+    /// become a dictionary oracle.
+    public var dimming: Dimming? {
+        guard let active = activeRowIndex else { return nil }
+        return Dimming(target: puzzle.rows[active].target, answer: puzzle.answer)
+    }
+
     /// The status of Row `index` from the player's point of view.
     public func status(ofRow index: Int) -> RowStatus {
         if index < solvedWords.count { return .solved(solvedWords[index]) }
