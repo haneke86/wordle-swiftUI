@@ -21,9 +21,19 @@ end
 engine = project.new_target(:framework, "Engine", :ios, DEPLOYMENT, nil, :swift)
 
 engine_group = project.main_group.new_group("Engine", "Engine")
-%w[TurkishAlphabet.swift Word.swift TileMark.swift Pattern.swift].each do |file|
+%w[TurkishAlphabet.swift Word.swift TileMark.swift Pattern.swift Lexicon.swift].each do |file|
   ref = engine_group.new_reference(file)
   engine.add_file_references([ref])
+end
+
+# Bundled Turkish word-list resources (#15). Copied into the framework bundle so
+# Lexicon.bundled() can read them via a Bundle(for:)-anchored lookup — a
+# framework target has no auto-generated Bundle.module. Produced by
+# scripts/vendor_wordlists.rb.
+resources_group = engine_group.new_group("Resources", "Resources")
+%w[accept-tr.txt answers-tr.txt blocklist-tr.txt].each do |file|
+  ref = resources_group.new_reference(file)
+  engine.add_resources([ref])
 end
 
 engine.build_configurations.each do |config|
@@ -47,7 +57,7 @@ end
 tests = project.new_target(:unit_test_bundle, "EngineTests", :ios, DEPLOYMENT, nil, :swift)
 
 tests_group = project.main_group.new_group("EngineTests", "EngineTests")
-%w[CasingTests.swift WordTests.swift PatternTests.swift].each do |file|
+%w[CasingTests.swift WordTests.swift PatternTests.swift LexiconTests.swift].each do |file|
   ref = tests_group.new_reference(file)
   tests.add_file_references([ref])
 end
