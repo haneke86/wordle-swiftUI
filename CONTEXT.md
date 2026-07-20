@@ -87,7 +87,7 @@ A submission of a valid Word whose computed Pattern does not match the Row's tar
 _Avoid_: wrong guess, fail, error
 
 **Perfect**:
-Completing a puzzle with zero Mistakes.
+Completing a puzzle with zero Mistakes *and* no assist. Any Hint or give-up voids Perfect — without adding a Mistake, since assists and Mistakes are separate ledgers (#7).
 
 **pattern(guess:answer:)**:
 The pure two-pass scoring function — greens first with letter-count decrement, then yellows only while unused copies remain. The single seam shared by forward Wordle (generator of feedback) and this game (validator of a player's word).
