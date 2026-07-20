@@ -14,6 +14,7 @@
 		36C9E3926412209BD5924044 /* TurkishAlphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A1797AA4763694298D260C /* TurkishAlphabet.swift */; };
 		41B7C3CC381AC39333A74C38 /* PatternTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F222AA58FC7E77FC8A0396 /* PatternTests.swift */; };
 		49B83637B89D443C2069AA8D /* CasingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B15C88EF81464D5CBD6B256 /* CasingTests.swift */; };
+		5B3EFCF8EFA0EA339F1FA184 /* PlayStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ED8FBAAEF5A9C682D7B170 /* PlayStateTests.swift */; };
 		6FC2E7EC18DF6B537F59669B /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2472F85195B2425396DDFF2 /* Pattern.swift */; };
 		6FFE2259D96363CE957E1202 /* Lexicon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F539938E5EFE6E404A99E50 /* Lexicon.swift */; };
 		7BCA8F742E8DAABCD2624741 /* SplitMix64Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E352AB54358F42923AAE7A1 /* SplitMix64Tests.swift */; };
@@ -45,6 +46,7 @@
 		ABF4B797AB84D766FDFB3429 /* SplitMix64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D47572AA5778011BDBE5561 /* SplitMix64.swift */; };
 		AEFA5F409A067AF597EE63CB /* Engine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EC9DF7A229123C2F0799566 /* Engine.framework */; };
 		BAF7D2EFF1BA9B38A656B9F0 /* blocklist-tr.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7B7641BCBD62FD775D0DA422 /* blocklist-tr.txt */; };
+		DDC26A38CE35115828D61683 /* PlayState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED7073CAC57CA791FF10713 /* PlayState.swift */; };
 		E8C156DBB9365B969E0CEFA7 /* WordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF40777333B922A1C2CBB06 /* WordTests.swift */; };
 		ECC256FCD606AFBDFB019EF5 /* DailyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194A3E56E77D02BAD99C868C /* DailyGenerator.swift */; };
 		F63240260F8C82EAEBF9E260 /* PuzzleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFA4AFA8098DCD90B37EC48 /* PuzzleTests.swift */; };
@@ -105,6 +107,8 @@
 		BCFA4AFA8098DCD90B37EC48 /* PuzzleTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PuzzleTests.swift; sourceTree = "<group>"; };
 		BCFF6CD2FAA8A923DBF25456 /* answers-tr.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = "answers-tr.txt"; sourceTree = "<group>"; };
 		D226A703114E6F127A704F3F /* accept-tr.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = "accept-tr.txt"; sourceTree = "<group>"; };
+		D5ED8FBAAEF5A9C682D7B170 /* PlayStateTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlayStateTests.swift; sourceTree = "<group>"; };
+		DED7073CAC57CA791FF10713 /* PlayState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlayState.swift; sourceTree = "<group>"; };
 		E09D63F8A0A33FE613D03D31 /* Engine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Engine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFF40777333B922A1C2CBB06 /* WordTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WordTests.swift; sourceTree = "<group>"; };
 		F2B381BAF43D212FB9F51FA1 /* Engine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Engine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +163,7 @@
 				3D47572AA5778011BDBE5561 /* SplitMix64.swift */,
 				A99CA42AEC5B130F69E7961F /* Puzzle.swift */,
 				194A3E56E77D02BAD99C868C /* DailyGenerator.swift */,
+				DED7073CAC57CA791FF10713 /* PlayState.swift */,
 			);
 			name = Engine;
 			path = Engine;
@@ -295,6 +300,7 @@
 				B4CF85E36863DD9D3CF64CA3 /* LexiconTests.swift */,
 				2E352AB54358F42923AAE7A1 /* SplitMix64Tests.swift */,
 				BCFA4AFA8098DCD90B37EC48 /* PuzzleTests.swift */,
+				D5ED8FBAAEF5A9C682D7B170 /* PlayStateTests.swift */,
 			);
 			name = EngineTests;
 			path = EngineTests;
@@ -442,6 +448,7 @@
 				15A1247A2818EDB48170EE88 /* LexiconTests.swift in Sources */,
 				7BCA8F742E8DAABCD2624741 /* SplitMix64Tests.swift in Sources */,
 				F63240260F8C82EAEBF9E260 /* PuzzleTests.swift in Sources */,
+				5B3EFCF8EFA0EA339F1FA184 /* PlayStateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +489,7 @@
 				ABF4B797AB84D766FDFB3429 /* SplitMix64.swift in Sources */,
 				1F3D21C9A53659B6D54CD7D2 /* Puzzle.swift in Sources */,
 				ECC256FCD606AFBDFB019EF5 /* DailyGenerator.swift in Sources */,
+				DDC26A38CE35115828D61683 /* PlayState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
